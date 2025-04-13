@@ -11,10 +11,14 @@
     </header>
     <main>
         <?php 
-        $valorReal = $_GET["valor"];
-        $converte = $valorReal / 5.84;
-        echo "Seus R$ $valorReal equivalem à US$ $converte";
-        echo "<p>Cotação fixa de R$5,84 informada diretamente no código";
+        $valorReal = $_GET["valor"] ?? 0;
+        $cotacao = 5.87;
+        $dolar = $valorReal / $cotacao;
+
+        $padrao = numfmt_create("pt-BR", NumberFormatter::CURRENCY);
+
+        echo "Seus " . numfmt_format_currency($padrao, $valorReal, "BRL") . " equivalem a " . numfmt_format_currency($padrao, $dolar, "USD");
+        echo "<p>Cotação fixa de R$5,87 informada diretamente no código";
         ?>
         
         <p><a href="javascript:history.go(-1)">Voltar</a></p>
