@@ -1,3 +1,76 @@
-body{
-    background-color: pink;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+header {
+    background-color: #c8a2c8; /* Lilac color */
+    color: white;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px 15px 0 0;
+    margin-top: 50px;
+}
+
+section, main {
+    background-color: #d0f0c0; /* Light green color */
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #555;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #c8a2c8; /* Lilac border */
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #a080a0; /* Darker lilac on focus */
+}
+
+button {
+    background-color: #c8a2c8; /* Lilac button */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #a080a0; /* Darker lilac on hover */
 }

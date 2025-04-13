@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Resultado</title>
 </head>
 <body>
@@ -11,7 +12,7 @@
     </header>
     <main>
         <?php 
-            $numeroReal = $_GET["numero"];
+            $numeroReal = $_POST["numero"] ?? 0;
             $inteira = floor($numeroReal);
             $fracionaria = $numeroReal - $inteira; 
             echo "Analisando o número informado pelo usuário " . $numeroReal;
